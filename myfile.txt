@@ -1,0 +1,1 @@
+reading the node file for asynchronous operation
