@@ -111,13 +111,25 @@
 
 
 /*EXAMPLE 3 of EVENT LOOP*/
-console.log("Start");
+// console.log("Start");
 
-setTimeout(() => {
-  console.log("Inside setTimeout");
-}, 0);
+// setTimeout(() => {
+//   console.log("Inside setTimeout");
+// }, 0);
 
-console.log("End");
+// console.log("End");
+
+
+
+/*   setTimeout vs setImmediate Example   */
+
+setTimeout(() => console.log("setTimeout"), 0);
+setImmediate(() => console.log("setImmediate"));
+
+
+
+
+
 
 
 // // const fs = require('fs');
