@@ -110,7 +110,14 @@
 // // console.log('6. End');
 
 
+/*EXAMPLE 3 of EVENT LOOP*/
+console.log("Start");
 
+setTimeout(() => {
+  console.log("Inside setTimeout");
+}, 0);
+
+console.log("End");
 
 
 // // const fs = require('fs');
