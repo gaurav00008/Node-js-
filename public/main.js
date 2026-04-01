@@ -123,11 +123,24 @@
 
 /*   setTimeout vs setImmediate Example   */
 
-setTimeout(() => console.log("setTimeout"), 0);
-setImmediate(() => console.log("setImmediate"));
+// setTimeout(() => console.log("setTimeout"), 0);
+// setImmediate(() => console.log("setImmediate"));
 
 
 
+
+/****🧪 Microtasks Example (Important) ****/
+console.log("Start");
+
+Promise.resolve().then(() => {
+  console.log("Promise");
+});
+
+process.nextTick(() => {
+  console.log("nextTick");
+});
+
+console.log("End");
 
 
 

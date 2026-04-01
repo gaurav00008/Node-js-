@@ -6,7 +6,7 @@
   "dependencies": {
     "corepack": "^0.31.0",
     "express": "^4.21.2",
-    "nodemon": "^3.1.11",
+    "nodemon": "^3.1.14",
     "npm": "^10.9.2"
   },
   "scripts": {
@@ -16,6 +16,5 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "devDependencies": {},
   "description": ""
 }
