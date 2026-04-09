@@ -5,6 +5,7 @@
   "main": "main.js",
   "dependencies": {
     "corepack": "^0.31.0",
+    "dayjs": "^1.11.20",
     "express": "^4.21.2",
     "nodemon": "^3.1.14",
     "npm": "^10.9.2"
