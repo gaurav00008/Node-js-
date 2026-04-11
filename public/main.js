@@ -256,15 +256,29 @@ console.log("End");
 
 ///1. Create a Simple Logger Middleware (custom)
 // logger.js
-import  http from 'http'
+// import  http from 'http'
 
-const server = http.createServer((req, res) => {
-    const time = new Date().toLocaleTimeString();
-    console.log(`[${time}] ${req.method} ${req.url}`);
+// const server = http.createServer((req, res) => {
+//     const time = new Date().toLocaleTimeString();
+//     console.log(`[${time}] ${req.method} ${req.url}`);
 
-    res.end("Check console for logs");
-});
+//     res.end("Check console for logs");
+// });
 
-server.listen(3000, () => {
-    console.log("Server running...");
+// server.listen(3000, () => {
+//     console.log("Server running...");
+// });
+
+
+
+//3. File Rename Tool
+// rename.js
+import fs from "fs";
+
+fs.rename("old.txt", "new.txt", (err) => {
+    if (err) {
+        console.log(err);
+        return;
+    }
+    console.log("File renamed!");
 });
