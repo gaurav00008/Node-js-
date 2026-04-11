@@ -319,12 +319,26 @@ console.log("End");
 // 4. Event Emitter (ES6)
 
 // event.js
-import EventEmitter from "events";
+// import EventEmitter from "events";
 
-const emitter = new EventEmitter();
+// const emitter = new EventEmitter();
 
-emitter.on("msg", (data) => {
-    console.log("Message:", data);
+// emitter.on("msg", (data) => {
+//     console.log("Message:", data);
+// });
+
+// emitter.emit("msg", "Hello ES6 Node");
+
+
+
+// 5. HTTP Server (ES6)
+
+import http from "http";
+
+const server = http.createServer((req, res) => {
+    res.end("ES6 Server running");
 });
 
-emitter.emit("msg", "Hello ES6 Node");
+server.listen(3000, () => {
+    console.log("Server running on port 3000");
+});
