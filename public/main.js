@@ -303,12 +303,28 @@ console.log("End");
 //3. Write File (ES6)
 
 // writeFile.js
-import fs from "fs";
+// import fs from "fs";
 
-fs.writeFile("output.txt", "Hello ES6!", (err) => {
-    if (err) {
-        console.log(err);
-        return;
-    }
-    console.log("File written!");
+// fs.writeFile("output.txt", "Hello ES6!", (err) => {
+//     if (err) {
+//         console.log(err);
+//         return;
+//     }
+//     console.log("File written!");
+// });
+
+
+
+
+// 4. Event Emitter (ES6)
+
+// event.js
+import EventEmitter from "events";
+
+const emitter = new EventEmitter();
+
+emitter.on("msg", (data) => {
+    console.log("Message:", data);
 });
+
+emitter.emit("msg", "Hello ES6 Node");
