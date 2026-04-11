@@ -214,41 +214,57 @@ console.log("End");
 
 
 // TO SHOW THE STATE OF A PROMISE 
-const myPromise = new Promise((resolve, reject) => {
-    setTimeout(()=> {
-        myPromise
-        .then(
-            result => console.log(result),
-            error => console.error(error)
-        )},2000);
-}); 
+// const myPromise = new Promise((resolve, reject) => {
+//     setTimeout(()=> {
+//         myPromise
+//         .then(
+//             result => console.log(result),
+//             error => console.error(error)
+//         )},2000);
+// }); 
 
 
-    console.log(myPromise);
+//     console.log(myPromise);
 
 
 // RUNNING MULITPLE PROMISES IN PARALLEL
-const fs=rquire('fs').promises;
-const myPromise1 = Promise.resolve('First result');
-const myPromise2 = new Promise((resolve)=> setTimeout(()=>resolve('Second result'), 2000));
-const myPromise3 = fs.readFile('myfile.txt', 'utf8');
+// const fs=rquire('fs').promises;
+// const myPromise1 = Promise.resolve('First result');
+// const myPromise2 = new Promise((resolve)=> setTimeout(()=>resolve('Second result'), 2000));
+// const myPromise3 = fs.readFile('myfile.txt', 'utf8');
 
-Promise.all([[myPromise1, promise2, promise3]])
-.then(results=>{
-    console.log('Results:', reuslts)
-})
-
-
+// Promise.all([[myPromise1, promise2, promise3]])
+// .then(results=>{
+//     console.log('Results:', reuslts)
+// })
 
 
 
-const http = require('http');
+
+
+// const http = require('http');
+
+// const server = http.createServer((req, res) => {
+//     res.write('Hello from Node.js server!');
+//     res.end();
+// });
+
+// server.listen(3000, () => {
+//     console.log('Server running on port 3000');
+// });
+
+
+///1. Create a Simple Logger Middleware (custom)
+// logger.js
+import  http from 'http'
 
 const server = http.createServer((req, res) => {
-    res.write('Hello from Node.js server!');
-    res.end();
+    const time = new Date().toLocaleTimeString();
+    console.log(`[${time}] ${req.method} ${req.url}`);
+
+    res.end("Check console for logs");
 });
 
 server.listen(3000, () => {
-    console.log('Server running on port 3000');
+    console.log("Server running...");
 });
