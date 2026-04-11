@@ -273,12 +273,27 @@ console.log("End");
 
 //3. File Rename Tool
 // rename.js
+// import fs from "fs";
+
+// fs.rename("old.txt", "new.txt", (err) => {
+//     if (err) {
+//         console.log(err);
+//         return;
+//     }
+//     console.log("File renamed!");
+// });
+
+
+
+
+// 2. Read File (ES6)
+
 import fs from "fs";
 
-fs.rename("old.txt", "new.txt", (err) => {
+fs.readFile("test.txt", "utf-8", (err, data) => {
     if (err) {
         console.log(err);
         return;
     }
-    console.log("File renamed!");
+    console.log(data);
 });
