@@ -288,12 +288,27 @@ console.log("End");
 
 // 2. Read File (ES6)
 
+// import fs from "fs";
+
+// fs.readFile("test.txt", "utf-8", (err, data) => {
+//     if (err) {
+//         console.log(err);
+//         return;
+//     }
+//     console.log(data);
+// });
+
+
+
+//3. Write File (ES6)
+
+// writeFile.js
 import fs from "fs";
 
-fs.readFile("test.txt", "utf-8", (err, data) => {
+fs.writeFile("output.txt", "Hello ES6!", (err) => {
     if (err) {
         console.log(err);
         return;
     }
-    console.log(data);
+    console.log("File written!");
 });
